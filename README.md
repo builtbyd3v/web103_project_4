@@ -2,9 +2,9 @@
 
 Submitted by: **Dev Goswami**
 
-About this web app: **App description here**
+About this web app: **Bolt Bucket is a custom car builder. Pick wheels, exterior color, roof, and interior — price and preview update live, and incompatible combos are disabled before you can pick them. Save a build, then view, edit, or delete it. React + Express + PostgreSQL (Render).**
 
-Time spent: **2** hours
+Time spent: **3** hours
 
 ## Required Features
 
@@ -13,8 +13,8 @@ The following **required** functionality is completed:
 <!-- Make sure to check off completed functionality below -->
 - [x] **The web app uses React to display data from the API.**
 - [x] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
-  - [ ]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
-  - [ ]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
+  - [x]  **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [x]  **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT * FROM tablename;' to display your table contents.**
 - [x] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
 - [x] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
 - [x] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
@@ -40,10 +40,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='web103_project_4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  GIF tool here
+GIF created with LiceCap.
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -51,7 +51,7 @@ GIF created with ...  GIF tool here
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+Built on a single `options` table plus an `incompatibilities` pairs table, so blocking impossible combos is one join. Price and combo validation run server-side; the client mirrors the rules to disable conflicting options early. Trickiest part: keeping the early-disable invariant so a currently-selected option never becomes invalid.
 
 ## License
 
