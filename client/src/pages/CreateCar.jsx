@@ -59,6 +59,12 @@ const CreateCar = () => {
             <h2>Customize your Bolt Bucket</h2>
 
             <div className="preview" style={{ backgroundColor: exterior?.color || '#222' }}>
+                <div className="preview-specs">
+                    {FEATURES.map(f => {
+                        const o = options.find(x => x.id === selected[f])
+                        return o ? <span key={f} className="preview-tag">{o.name}</span> : null
+                    })}
+                </div>
                 <span className="preview-price">${total.toLocaleString()}</span>
             </div>
 
