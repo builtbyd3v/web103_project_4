@@ -10,3 +10,23 @@
     overflow-x: hidden;
     padding-bottom: 50px;
 }
+
+.create { max-width: 700px; margin: 0 auto; padding: 1rem; }
+.preview {
+    height: 180px; border-radius: 12px; margin-bottom: 1rem;
+    display: flex; align-items: flex-end; justify-content: flex-end;
+    transition: background-color 0.3s;
+}
+.preview-price {
+    font-size: 2rem; font-weight: bold; color: #fff;
+    background: rgba(0,0,0,0.5); padding: 0.25rem 0.75rem; margin: 1rem; border-radius: 8px;
+}
+.feature { margin: 1rem 0; }
+.feature h3 { text-transform: capitalize; margin-bottom: 0.5rem; }
+.option-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.option-row button { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; }
+.option-row button.selected { outline: 3px solid #2980b9; }
+.option-row button:disabled { opacity: 0.35; cursor: not-allowed; }
+.swatch { width: 16px; height: 16px; border-radius: 50%; border: 1px solid #888; }
+.error { color: #c0392b; font-weight: bold; }
+.save { margin-top: 1rem; }

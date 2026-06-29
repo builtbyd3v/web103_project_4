@@ -10,7 +10,6 @@ export const getCar = async (id) => {
     return res.json()
 }
 
-// returns { data } on success, { error } on bad combo (400) — caller shows the message
 export const createCar = async (car) => {
     const res = await fetch(BASE, {
         method: 'POST',
